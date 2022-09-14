@@ -4,7 +4,7 @@ import { NavLink as Link } from "react-router-dom";
 export default function Sidebar() {
   return (
     <>
-    <aside className="main-sidebar sidebar-dark-primary elevation-4">
+    <aside className="main-sidebar sidebar-dark-primary sidebar-no-expand elevation-4">
       <a href="index3.html" className="brand-link">
         <img
           src="/assets/dist/img/AdminLTELogo.png"
@@ -37,17 +37,23 @@ export default function Sidebar() {
             data-accordion="false"
           >
             <li className="nav-item">
-              <Link to="/" className="nav-link">
+              <Link to="/dashboard" className="nav-link">
                 <i className="nav-icon fas fa-tachometer-alt" />
                 <p>Dashboard</p>
               </Link>
             </li>
             <li className="nav-item">
+              <Link to="/repair" className="nav-link">
+                <i className="nav-icon fas fa-tools" />
+                <p>Repair</p>
+              </Link>
+            </li>
+            {/* <li className="nav-item">
               <Link to="/users" className="nav-link">
                 <i className="nav-icon fas fa-users" />
                 <p>Users</p>
               </Link>
-            </li>
+            </li> */}
             <li className="nav-item">
               <Link to="/starter" className="nav-link">
                 <i className="nav-icon fas fa-file" />
