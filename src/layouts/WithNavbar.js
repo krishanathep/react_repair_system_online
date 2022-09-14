@@ -5,11 +5,11 @@ import Footer from "../components/Footer";
 
 export default function WithNavbar({ children }) {
   return (
-    <>
+    <div className="wrapper">
       <Navbar />
       <Sidebar />
       <Outlet />
       <Footer />
-    </>
+    </div>
   );
 }
