@@ -9,23 +9,35 @@ export default function Users() {
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState(null);
 
- const fetchData = async() =>{
+  const fetchData = async () => {
     try {
       setLoading(true);
       await fetch("https://www.melivecode.com/api/users")
         .then((res) => res.json())
         .then((res) => setUsers(res));
     } catch (error) {
-        setErrors(error)
+      setErrors(error);
     } finally {
-        setLoading(false)
+      setLoading(false);
     }
-  }
+  };
 
   const columns = [
     {
       dataField: "id",
       text: "ID",
+    },
+    {
+      dataField: "avatar",
+      isDummyField: true,
+      text: "Avatar",
+      formatter: (cellContent, row) => {
+        return (
+          <>
+          <img src={row.avatar} className="rounded-circle" alt="Avatar" width='50'/>
+          </>
+        );
+      },
     },
     {
       dataField: "fname",
@@ -41,13 +53,13 @@ export default function Users() {
     },
     {
       dataField: "avatar",
-      text: "Avatar",
+      text: "Avatar link",
     },
   ];
 
-  useEffect(()=>{
-    fetchData()
-  },[])
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   if (loading === true) {
     return (
