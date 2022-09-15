@@ -2,6 +2,14 @@ import React from 'react'
 import { NavLink as Link } from "react-router-dom";
 
 export default function Sidebar() {
+
+  const user = JSON.parse(localStorage.getItem("user"));
+  const token = localStorage.getItem("accessToken");
+
+  if (!token) {
+    window.location.href = "/";
+  }
+
   return (
     <>
     <aside className="main-sidebar sidebar-dark-primary sidebar-no-expand elevation-4">
@@ -25,7 +33,7 @@ export default function Sidebar() {
           </div>
           <div className="info">
             <a href="#" className="d-block">
-              {/* {user.email} */}
+              {user.email}
             </a>
           </div>
         </div>

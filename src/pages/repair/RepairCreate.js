@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 export default function RepairCreate() {
   return (
@@ -33,7 +33,7 @@ export default function RepairCreate() {
                   <div className="card-body">
                     <form>
                       <div className="row">
-                        <div className="col-md-6">
+                        <div className="col-md-12">
                           <div className="form-group">
                             <label htmlFor="">Name :</label>
                             <input
@@ -43,53 +43,55 @@ export default function RepairCreate() {
                             />
                           </div>
                         </div>
-                        <div className="col-md-6">
+                        <div className="col-md-12">
                           <div className="form-group">
                             <label htmlFor="">Type :</label>
-                            <input
-                              type="name"
-                              className="form-control"
-                              placeholder="Repair name"
-                            />
+                            <select className="form-control">
+                              <option>Hardware</option>
+                              <option>Software</option>
+                              <option>Training</option>
+                              <option>Maintanance</option>
+                            </select>
                           </div>
                         </div>
-                        <div className="col-md-6">
+                        <div className="col-md-12">
                           <div className="form-group">
                             <label htmlFor="">Detail :</label>
                             <textarea
+                              rows="5"
                               type="name"
                               className="form-control"
-                              placeholder="Repair name"
+                              placeholder="Repair detail"
                             ></textarea>
                           </div>
                         </div>
-                        <div className="col-md-6">
-                          <div className="form-group">
-                            <label htmlFor="">Username :</label>
-                            <input
-                              type="name"
-                              className="form-control"
-                              placeholder="Repair name"
-                            />
-                          </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="form-group">
-                            <label htmlFor="">Status :</label>
-                            <input
-                              type="name"
-                              className="form-control"
-                              placeholder="Repair name"
-                            />
-                          </div>
-                        </div>
-                        <div className="col-md-6">
+                        <div className="col-md-12">
                           <div className="form-group">
                             <label htmlFor="">Date :</label>
                             <input
                               type="name"
                               className="form-control"
+                              placeholder="Repair date"
+                            />
+                          </div>
+                        </div>
+                        <div className="col-md-12">
+                          <div className="form-group">
+                            <input
+                              type="name"
+                              className="form-control"
                               placeholder="Repair name"
+                              hidden
+                            />
+                          </div>
+                        </div>
+                        <div className="col-md-12">
+                          <div className="form-group">
+                            <input
+                              type="name"
+                              className="form-control"
+                              placeholder="Repair name"
+                              hidden
                             />
                           </div>
                         </div>
@@ -100,7 +102,9 @@ export default function RepairCreate() {
                               className="btn btn-primary"
                               value="Submit"
                             />{" "}
-                            <Link to='/repair' className="btn btn-danger">Cancel</Link>
+                            <Link to="/repair" className="btn btn-danger">
+                              Cancel
+                            </Link>
                           </div>
                         </div>
                       </div>
