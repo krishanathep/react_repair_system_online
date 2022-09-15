@@ -1,4 +1,4 @@
-import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
+import { HashRouter,Routes,Route } from "react-router-dom";
 import WithNavbar from "./layouts/WithNavbar";
 import WithOutNavbar from './layouts/WithOutNavbar'
 import Login from './pages/auth/login'
@@ -10,7 +10,7 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
       <Routes>
         <Route element={<WithOutNavbar/>}>
           <Route path="/" element={<Login/>}/>
@@ -22,7 +22,7 @@ function App() {
           <Route path="/users" element={<Users/>}/>
         </Route>
       </Routes>
-    </Router>
+    </HashRouter>
   );
 }
 
