@@ -28,7 +28,7 @@ export default function Navbar() {
         <ul className="navbar-nav ml-auto">
           <li className="nav-item dropdown">
             <a className="nav-link" data-toggle="dropdown" href="#">
-              admin{' '}<i className="far fa-user"></i>
+              <i className="fas fa-user"></i>{' '}admin
             </a>
             <div className="dropdown-menu dropdown-menu-sm dropdown-menu-right">
               <a href="#" className="dropdown-item">

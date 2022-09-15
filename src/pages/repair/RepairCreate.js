@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 export default function RepairCreate() {
+  const [startDate, setStartDate] = useState(new Date());
   return (
     <>
       <div className="content-wrapper">
@@ -26,7 +29,7 @@ export default function RepairCreate() {
           <div className="container-fluid">
             <div className="row">
               <div className="col-lg-12">
-                <div className="card">
+                <div className="card card-primary card-outline">
                   <div className="card-header">
                     <h5 className="m-0">Repair Create</h5>
                   </div>
@@ -39,7 +42,7 @@ export default function RepairCreate() {
                             <input
                               type="name"
                               className="form-control"
-                              placeholder="Repair name"
+                              placeholder="Please input data"
                             />
                           </div>
                         </div>
@@ -47,6 +50,7 @@ export default function RepairCreate() {
                           <div className="form-group">
                             <label htmlFor="">Type :</label>
                             <select className="form-control">
+                              <option selected disabled>Please select data</option>
                               <option>Hardware</option>
                               <option>Software</option>
                               <option>Training</option>
@@ -61,17 +65,17 @@ export default function RepairCreate() {
                               rows="5"
                               type="name"
                               className="form-control"
-                              placeholder="Repair detail"
+                              placeholder="Please input data"
                             ></textarea>
                           </div>
                         </div>
                         <div className="col-md-12">
                           <div className="form-group">
                             <label htmlFor="">Date :</label>
-                            <input
-                              type="name"
+                            <DatePicker
                               className="form-control"
-                              placeholder="Repair date"
+                              selected={startDate}
+                              onChange={(date) => setStartDate(date)}
                             />
                           </div>
                         </div>

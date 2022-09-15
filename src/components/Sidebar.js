@@ -56,12 +56,12 @@ export default function Sidebar() {
                 <p>Repair</p>
               </Link>
             </li>
-            {/* <li className="nav-item">
+            <li className="nav-item">
               <Link to="/users" className="nav-link">
                 <i className="nav-icon fas fa-users" />
                 <p>Users</p>
               </Link>
-            </li> */}
+            </li>
             <li className="nav-item">
               <Link to="/starter" className="nav-link">
                 <i className="nav-icon fas fa-file" />

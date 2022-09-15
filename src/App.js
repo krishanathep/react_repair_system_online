@@ -5,6 +5,8 @@ import Login from './pages/auth/login'
 import Dashboard from "./Dashboard";
 import Repair from "./pages/repair";
 import RepairCreate from "./pages/repair/RepairCreate";
+import Users from './pages/users'
+import './App.css';
 
 function App() {
   return (
@@ -17,6 +19,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard/>} />
           <Route path="/repair" element={<Repair/>}/>
           <Route path="/repair/create" element={<RepairCreate/>}/>
+          <Route path="/users" element={<Users/>}/>
         </Route>
       </Routes>
     </Router>
